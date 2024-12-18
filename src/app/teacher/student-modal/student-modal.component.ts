@@ -8,10 +8,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrl: './student-modal.component.scss'
 })
 export class StudentModalComponent {
-  @Input() student: any;        // The student object to be displayed
-  @Output() closeModal: EventEmitter<void> = new EventEmitter(); // Event to close the modal
+  @Input() student: any;       
+  @Output() closeModal: EventEmitter<void> = new EventEmitter(); 
 
   close() {
-    this.closeModal.emit();  // Emit event to close modal
+    this.closeModal.emit();  
   }
 }

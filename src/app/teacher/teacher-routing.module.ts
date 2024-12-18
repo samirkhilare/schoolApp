@@ -7,8 +7,6 @@ import { StudentListComponent } from './student-list/student-list.component';
 const routes: Routes = [
   {path:'',component:TeacherDashboardComponent},
   {path:'teacher-dashboard',component:TeacherDashboardComponent},
-  { path: 'student-profile/:id', component: StudentProfileComponent },
-  { path: 'student-profile', component: StudentProfileComponent },
   { path: 'student-list', component: StudentListComponent },
 ];
 

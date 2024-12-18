@@ -26,13 +26,12 @@
     ) {}
 
     ngOnInit(): void {
-      // Retrieve the logged-in teacher details
+  
       this.teacher = JSON.parse(localStorage.getItem('currentUser') || '{}');
       
-      // Fetch attendance history from StudentService
+   
       this.attendanceHistory = this.teacherService.getAttendance();
 
-      // Initialize filtered attendance to show all records initially
       this.filteredAttendance = [...this.attendanceHistory];
 
       this.students = this.teacherService.students;
@@ -49,7 +48,7 @@
           return recordDate >= start && recordDate <= end;
         });
       } else {
-        // Reset to all attendance records if dates are not selected
+
         this.filteredAttendance = [...this.attendanceHistory];
       }
     }
@@ -77,7 +76,7 @@
       this.showModal = true;
     }
   
-    // Close the modal
+
     closeModal(): void {
       this.showModal = false;
     }

@@ -62,21 +62,21 @@ export class StudentService {
       contact: '1231231234',
       role: 'admin',
       password: 'admin123',
-      attendance: [] // No attendance data for admins
+      attendance: [] 
     }
   ];
   
 
   constructor() {}
 
-  // Method to get all users
+
   getUsers(): any[] {
     return this.students;
   }
 
   registerStudent(student: any): void {
     const students = this.getStudents();
-    student.id = students.length + 1; // Ensure student has an id when registering
+    student.id = students.length + 1; 
     students.push(student);
     localStorage.setItem(this.storageKey, JSON.stringify(students));
   }
@@ -87,7 +87,7 @@ export class StudentService {
 
   markAttendance(attendanceRecord: { date: string, studentId: string }) {
     let attendanceList = JSON.parse(localStorage.getItem('attendance') || '[]');
-    attendanceList.push(attendanceRecord); // Save the new attendance record
+    attendanceList.push(attendanceRecord);
     localStorage.setItem('attendance', JSON.stringify(attendanceList));
   }
 
