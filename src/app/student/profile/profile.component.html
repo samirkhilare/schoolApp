@@ -1,0 +1,13 @@
+<div class="profile-container">
+    <div class="form-container">
+      <h2>Profile</h2>
+      <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+        <input type="text" placeholder="Name" formControlName="name" />
+        <input type="email" placeholder="Email" formControlName="email" />
+        <input type="text" placeholder="password" formControlName="password" />
+        <input type="text" placeholder="Contact" formControlName="contact" />
+        <button type="submit" [disabled]="!profileForm.valid">Update Profile</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,15 @@
+<div class="attendance-container">
+    <div class="form-container">
+      <h2>Mark Attendance</h2>
+      <form [formGroup]="attendanceForm" (ngSubmit)="markAttendance()">
+        <input type="date" formControlName="attendanceDate" />
+        <select formControlName="selectedStudent">
+          <option *ngFor="let student of students" [value]="student.id">
+            {{ student.name }}
+          </option>
+        </select>
+        <button type="submit" [disabled]="!attendanceForm.valid">Mark Attendance</button>
+      </form>
+    </div>
+  </div>
+  

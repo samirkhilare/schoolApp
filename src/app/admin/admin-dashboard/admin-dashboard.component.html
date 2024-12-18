@@ -1,0 +1,55 @@
+<div class="admin-dashboard-container">
+    <h1>Admin Dashboard</h1>
+
+    <!-- Add Teacher Section -->
+    <div class="add-teacher-container">
+        <h2>Add New Teacher</h2>
+        <form [formGroup]="addTeacherForm" (ngSubmit)="addTeacher()">
+            <input type="text" formControlName="name" placeholder="Name" />
+            <input type="email" formControlName="email" placeholder="Email" />
+            <input type="text" formControlName="contact" placeholder="Contact" />
+            <input type="password" formControlName="password" placeholder="Password" />
+            <button type="submit" [disabled]="!addTeacherForm.valid">Add Teacher</button>
+        </form>
+    </div>
+
+    <!-- User Management Section -->
+    <div class="user-management-container">
+        <h2>Manage Users</h2>
+        <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="filterUsers()"
+            placeholder="Search users by name..." />
+
+
+        <table *ngIf="filteredUsers.length > 0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of filteredUsers">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        <span [class.active]="user.active" [class.inactive]="!user.active">
+                            {{ user.active ? 'Active' : 'Inactive' }}
+                        </span>
+                    </td>
+                    <td>
+                        <button (click)="toggleStatus(user)">
+                            {{ user.active ? 'Deactivate' : 'Activate' }}
+                        </button>
+                        <button (click)="deleteUser(user.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p *ngIf="filteredUsers.length === 0">No users found.</p>
+    </div>
+</div>

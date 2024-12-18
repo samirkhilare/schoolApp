@@ -1,0 +1,26 @@
+<div class="student-list-container">
+    <h2>Student List</h2>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search students..." />
+    
+    <table *ngIf="filteredStudents.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Attendance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of filteredStudents">
+          <td>{{ student.name }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.attendanceStatus }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div *ngIf="filteredStudents.length === 0">
+      <p>No students found.</p>
+    </div>
+  </div>
+  

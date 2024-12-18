@@ -1,0 +1,71 @@
+.dashboard-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  .dashboard-header {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-header h2 {
+    color: #333;
+  }
+  
+  .profile-summary p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .action-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 200px;
+  }
+  
+  .action-buttons button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+  }
+  
+  .action-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .attendance-history {
+    margin-top: 30px;
+  }
+  
+  .attendance-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .attendance-history table th, .attendance-history table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .attendance-history table th {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .attendance-history table td {
+    background-color: #fff;
+  }
+  
+  .attendance-history .no-records {
+    color: #888;
+    text-align: center;
+    font-size: 1.1em;
+  }
+  

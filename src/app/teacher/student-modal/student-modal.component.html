@@ -1,0 +1,14 @@
+<div class="modal-overlay" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>Student Details</h2>
+      <div>
+        <p><strong>ID:</strong> {{ student?.id }}</p>
+        <p><strong>Name:</strong> {{ student?.name }}</p>
+        <p><strong>Email:</strong> {{ student?.email }}</p>
+        <p><strong>Contact:</strong> {{ student?.contact }}</p>
+        <p><strong>Attendance:</strong> {{ student?.attendance[0]?.status || 'No records' }}</p>
+      </div>
+      <button (click)="close()">Close</button>
+    </div>
+  </div>
+  

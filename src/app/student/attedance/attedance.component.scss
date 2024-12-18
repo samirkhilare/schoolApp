@@ -1,0 +1,85 @@
+/* attendance.component.scss */
+.attendance-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .attendance-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .attendance-header {
+    text-align: center;
+    margin-bottom: 20px;
+  
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  
+  .attendance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .attendance-list label {
+    font-weight: bold;
+  }
+  
+  .attendance-list input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+
+  /* Mobile responsiveness */
+@media (max-width: 600px) {
+    .registration-container,
+    .login-container,
+    .profile-container,
+    .dashboard-container,
+    .attendance-container {
+      padding: 10px;
+    }
+  
+    .form-container,
+    .profile-card,
+    .dashboard-card,
+    .attendance-card {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .dashboard-content {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .attendance-list input {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  

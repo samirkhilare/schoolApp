@@ -1,0 +1,29 @@
+<div class="registration-container">
+    <div class="form-container">
+      <h2>Register</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <input type="text" placeholder="Full Name" formControlName="name" />
+        <input type="email" placeholder="Email" formControlName="email" />
+        <input type="password" placeholder="Password" formControlName="password" />
+        <input type="text" placeholder="Contact" formControlName="contact" />
+        
+        <!-- Role Selection -->
+        <div class="role-selection">
+          <label for="role" value="Select Role">    </label>
+          <select formControlName="role">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <br>
+  
+        <button type="submit" [disabled]="!registerForm.valid">Register</button>
+      </form>
+  
+      <div class="login-link">
+        Already have an account? <a routerLink="/auth/login">Login</a>
+      </div>
+    </div>
+  </div>
+  

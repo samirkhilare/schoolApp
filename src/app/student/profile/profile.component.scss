@@ -1,0 +1,108 @@
+/* profile.component.scss */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .profile-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .profile-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+  }
+  
+  .profile-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .profile-card input:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Mobile responsiveness */
+@media (max-width: 600px) {
+  .registration-container,
+  .login-container,
+  .profile-container,
+  .dashboard-container,
+  .attendance-container {
+    padding: 10px;
+  }
+
+  .form-container,
+  .profile-card,
+  .dashboard-card,
+  .attendance-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .dashboard-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .attendance-list input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .registration-container,
+    .login-container,
+    .profile-container,
+    .dashboard-container,
+    .attendance-container {
+      padding: 10px;
+    }
+  
+    .form-container,
+    .profile-card,
+    .dashboard-card,
+    .attendance-card {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .dashboard-content {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .attendance-list input {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
