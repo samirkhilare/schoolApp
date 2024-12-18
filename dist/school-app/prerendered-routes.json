@@ -1,0 +1,16 @@
+{
+  "routes": {
+    "/": {},
+    "/admin": {},
+    "/auth": {},
+    "/auth/login": {},
+    "/auth/register": {},
+    "/student": {},
+    "/student/attendance": {},
+    "/student/dashboard": {},
+    "/student/profile": {},
+    "/teacher": {},
+    "/teacher/student-list": {},
+    "/teacher/teacher-dashboard": {}
+  }
+}
